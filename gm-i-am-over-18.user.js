@@ -24,6 +24,7 @@
 // @include       http://www.kocpc.com.tw/*
 // @include       http://www.myfreecams.com/*
 // @include       http://www.ibeauty.tw/*
+// @include       https://www.up01.cc/post/*
 // @require       https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
 // @require       https://gist.githubusercontent.com/BrockA/2625891/raw/waitForKeyElements.js
 // @grant         none
@@ -134,6 +135,15 @@ window.addEventListener('load', function() { // wait until page loaded
       console.log("ibeauty");
       waitForKeyElements (
         ".warningWp .warningBtn .btnYes", 
+        clickToContinue
+      );
+  }
+
+  // up01
+  if (url.match(/www\.up01\.cc/)) {
+      console.log("up01");
+      waitForKeyElements (
+        'a:contains("我已滿18歲 進入")',
         clickToContinue
       );
   }
